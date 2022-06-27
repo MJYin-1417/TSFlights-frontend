@@ -1,0 +1,125 @@
+<div class="container avenir">
+    <div class="row form-section">
+            <form class="booking-form">
+                <h1 class="center">Update Panel</h1>
+
+                <div class="flight_pane">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-2 form-label">Select</div>
+                                    <div class="col-sm-2 form-label">ID</div>
+                                    <div class="col-sm-3 form-label">Origin</div>
+                                    <div class="col-sm-3 form-label">Destination</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-3 form-label">Flight number</div>
+                                    <div class="col-sm-3 form-label">Departure</div>
+                                    <div class="col-sm-3 form-label">Arrival</div>
+                                    <div class="col-sm-3 form-label">Nonstop</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container yOverflow">
+                        <div class="row" *ngFor="let flight of flightList; let i=index">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-2 form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (click)="onClick(flight)">
+                                        <label class="form-check-label" for="flexRadioDefault1"></label>
+                                    </div>
+                                    <div class="col-sm-2">{{flight.id}}</div>
+                                    <div class="col-sm-3">{{flight.origin}}</div>
+                                    <div class="col-sm-3">{{flight.destination}}</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-3">{{flight.flightnumber}}</div>
+                                    <div class="col-sm-3">{{flight.depart | date : 'shortDate'}}</div>
+                                    <div class="col-sm-3">{{flight.arrive | date: 'shortDate'}}</div>
+                                    <div class="col-sm-3">{{flight.nonstop}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container update-input-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-2 form-check first">
+                                        <h2>Input</h2>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <span class="form-label">Origin</span>
+                                            <input class="form-control" type="text" [(ngModel)]="origin" name="origin" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <span class="form-label">Destination</span>
+                                            <input class="form-control" type="text" [(ngModel)]="destination" name="destination" placeholder="City">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <span class="form-label">Flight number</span>
+                                            <input class="form-control form-control-lg" type="text" [(ngModel)]="flightnumber" name="flightnumber" placeholder="eg. 123456">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Departing</span>
+                                            <input class="form-control" type="date" [(ngModel)]="depart" name="depart" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <span class="form-label">Returning</span>
+                                            <input class="form-control" type="date" [(ngModel)]="arrive" name="arrive" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="custom-control custom-switch first">
+                                            <input type="checkbox" (click)="toggleNonStop()" class="custom-control-input first" id="customSwitch1">
+                                            <label class="custom-control-label whiteSwitchLabel" for="customSwitch1">Nonstop</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row justify-content-end">
+                            <div class="col-md-2">
+                                <div class="form-btn">
+                                    <button class="submit-btn" (click)="update()">Update flight</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-btn">
+                                    <button class="submit-btn" (click)="delete()">Delete flight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+            </form>
+    </div>
+</div>
