@@ -5,3 +5,6 @@ Main Interface:
 ![home](https://github.com/MJYin-1417/TSFlights-frontend/home.png)
 
 # Tech
+Typescript, Angular, NestJS, PostgreSQL, Bootstrap
+
+#RESTful API
