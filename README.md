@@ -1,12 +1,11 @@
-# TSFlightsApp
+# TSFlightsApp Frontend
 
 ## Description
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.  
+The frontend of this app is built with Angular.
 This app is built for learning purposes only.  
 The frontend of this flights app provides an interface to allow you to search for flights according to origin and destination. It lets you create new flights to be displayed in the main panel, and it can also update or delete those flights.
 
-ps. Logo created by myself
-
+ps. Logo created by myself. TS for TypeScript/Touching skies.
 ### Backend
 Link: https://github.com/MJYin-1417/TSFlights-backend
 
