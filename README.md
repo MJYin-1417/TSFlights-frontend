@@ -1,6 +1,10 @@
 # TSFlightsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.  
+This app is built for learning purposes only.  
+This flights app allows you to search for flights according to origin and destination. It lets you create new flights to be displayed in the main panel, and it can also update or delete those flights.
+
+ps. Logo created by myself
 
 ## Interfaces:
 
