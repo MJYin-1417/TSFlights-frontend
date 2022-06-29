@@ -1,7 +1,7 @@
 # TSFlightsApp Frontend
 
 ## Description
-The frontend of this app is built with Angular.
+The frontend of this app is built with **Angular**.
 This app is built for learning purposes only.  
 The frontend of this flights app provides an interface to allow you to search for flights according to origin and destination. It lets you create new flights to be displayed in the main panel, and it can also update or delete those flights.
 
